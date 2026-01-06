@@ -1,4 +1,4 @@
-﻿namespace Welcome
+﻿namespace DioCSharp.Welcome
 {
     static class Program
     {
