@@ -4,6 +4,7 @@
 // ===================================================
 // Instanciando um objeto da classe Pessoa:
 Console.WriteLine("Instanciando um objeto da classe Pessoa:");
+Console.WriteLine();
 
 Pessoa pessoa1 = new Pessoa();
 
@@ -17,12 +18,14 @@ pessoa1.Apresentar();
 //     Nome = "Caio",
 //     Idade = 26
 // };
+// pessoa1.Apresentar();
 
 
 // ===================================================
 // Tipos de dados comuns em C#:
 Console.WriteLine();
 Console.WriteLine("Tipos de dados comuns em C#:");
+Console.WriteLine();
 
 
     string apresentacao = "Olá, seja bem-vindo."; // string
@@ -47,6 +50,7 @@ Console.WriteLine("Tipos de dados comuns em C#:");
 // Modificando valores das variáveis com o operador de atribuição
 Console.WriteLine();
 Console.WriteLine("Modificando valores das variáveis:");
+Console.WriteLine();
 
     apresentacao = "Olá, meu nome é Caio.";
     quantidade = 100;
@@ -65,6 +69,7 @@ Console.WriteLine("Modificando valores das variáveis:");
 // DateTime
 Console.WriteLine();
 Console.WriteLine("Trabalhando com DateTime:");
+Console.WriteLine();
 
     DateTime dataAtual = DateTime.Now;
 
@@ -78,6 +83,7 @@ Console.WriteLine("Trabalhando com DateTime:");
 // Constantes são variáveis cujo valor não pode ser alterado durante a execução do programa
 Console.WriteLine();
 Console.WriteLine("Trabalhando com constantes:");
+Console.WriteLine();
 
     const double PI = 3.14;
 
@@ -92,6 +98,7 @@ Console.WriteLine("Trabalhando com constantes:");
  
 Console.WriteLine();
 Console.WriteLine("Trabalhando com conversão de tipos:");
+Console.WriteLine();
 
     string valorString = "15";
     int valorInteiro = Convert.ToInt32(valorString);
@@ -108,6 +115,7 @@ Console.WriteLine("Trabalhando com conversão de tipos:");
 // Utiliza-se o método ToString() para converter outros tipos de dados para string. É um método da classe Object, do qual todas as classes em C# herdam.
 Console.WriteLine();
 Console.WriteLine("Trabalhando com conversão para string:");
+Console.WriteLine();
 
     int inteiro = 20;
     double pontoFlutuante = 45.89;
@@ -128,6 +136,7 @@ Console.WriteLine("Trabalhando com conversão para string:");
 // Cast explícito ocorre quando um tipo de dado maior é convertido para um tipo menor, podendo haver perda de dados
 Console.WriteLine();
 Console.WriteLine("Trabalhando com cast implícito e explícito:");
+Console.WriteLine();
 
     // Cast implícito Exemplo 1
     int inteiroCast = 100;
@@ -158,9 +167,216 @@ Console.WriteLine("Trabalhando com cast implícito e explícito:");
 // Ordem de precedência: (), *, /, +, -
 Console.WriteLine();
 Console.WriteLine("Trabalhando com ordem dos operadores em expressões matemáticas:");
+Console.WriteLine();
 
     int resultado1 = 10 + 5 * 2; // Multiplicação antes da adição
     int resultado2 = (10 + 5) * 2; // Parênteses alteram a ordem
 
     Console.WriteLine("Resultado sem parênteses (10 + 5 * 2): " + resultado1);
     Console.WriteLine("Resultado com parênteses ((10 + 5) * 2): " + resultado2);
+
+
+// ===================================================
+// Operadores condicionais
+// if, else if, else, switch e operador ternário
+Console.WriteLine();
+Console.WriteLine("Trabalhando com operadores condicionais:");
+Console.WriteLine();
+
+    // Exemplo 1 com ||:
+    Console.WriteLine("Digite uma letra:");
+    string? letra = Console.ReadLine();
+
+    if (letra == "a" || 
+        letra == "e" || 
+        letra == "i" || 
+        letra == "o" || 
+        letra == "u")
+    {
+        Console.WriteLine("A letra é uma vogal.");
+    }
+    else
+    {
+        Console.WriteLine("A letra não é uma vogal.");
+    }
+
+    // Exemplo 2 com switch
+    Console.WriteLine();
+    Console.WriteLine("Digite uma letra:");
+    letra = Console.ReadLine();
+
+    switch (letra)
+    {
+        case "a":
+        case "e":
+        case "i":
+        case "o":
+        case "u":
+            Console.WriteLine("A letra é uma vogal.");
+            break;
+        default:
+            Console.WriteLine("A letra não é uma vogal.");
+            break;
+    }
+
+    // Exemplo 3 com switch
+    int diaDaSemana = 3;
+    switch (diaDaSemana)
+    {
+        case 1:
+            Console.WriteLine("Domingo");
+            break;
+        case 2:
+            Console.WriteLine("Segunda-feira");
+            break;
+        case 3:
+            Console.WriteLine("Terça-feira");
+            break;
+        case 4:
+            Console.WriteLine("Quarta-feira");
+            break;
+        case 5:
+            Console.WriteLine("Quinta-feira");
+            break;
+        case 6:
+            Console.WriteLine("Sexta-feira");
+            break;
+        case 7:
+            Console.WriteLine("Sábado");
+            break;
+        default:
+            Console.WriteLine("Dia inválido");
+            break;
+    }
+
+    // Exemplo 4 com switch moderno (C# 8.0+)
+    string diaSemanaString = diaDaSemana switch
+    {
+        1 => "Domingo",
+        2 => "Segunda-feira",
+        3 => "Terça-feira",
+        4 => "Quarta-feira",
+        5 => "Quinta-feira",
+        6 => "Sexta-feira",
+        7 => "Sábado",
+        _ => "Dia inválido"
+    };
+    Console.WriteLine("Dia da semana (switch moderno): " + diaSemanaString);
+
+
+    // Exemplo 5 com &&:
+    int numeroCondicional = 15;
+
+    if (numeroCondicional < 10)
+    {
+        Console.WriteLine("Número é menor que 10.");
+    }
+    else if (numeroCondicional >= 10 && numeroCondicional <= 20)
+    {
+        Console.WriteLine("Número está entre 10 e 20.");
+    }
+    else
+    {
+        Console.WriteLine("Número é maior que 20.");
+    }
+
+    // Exemplo 6 com operador ternário
+    string resultadoTernario = (numeroCondicional % 2 == 0) ? "Número é par." : "Número é ímpar.";
+    Console.WriteLine("Resultado com operador ternário: " + resultadoTernario);
+
+
+// ===================================================
+// Operadores lógicos
+// && (E), || (OU), ! (NÃO)
+Console.WriteLine();
+Console.WriteLine("Trabalhando com operadores lógicos:");
+Console.WriteLine();
+
+    bool condicao1 = true;
+    bool condicao2 = false;
+    bool condicao3 = true;
+    bool condicao4 = false;
+
+    // Operador E (&&)
+    bool resultadoE = condicao1 && condicao2;
+    Console.WriteLine("Resultado do operador E (true && false): " + resultadoE);
+    Console.WriteLine("Resultado do operador E (true && true): " + (condicao1 && condicao3));
+    Console.WriteLine("Resultado do operador E (false && false): " + (condicao2 && condicao4));
+
+    // Operador OU (||)
+    bool resultadoOU = condicao1 || condicao2;
+    Console.WriteLine("Resultado do operador OU (true || false): " + resultadoOU);
+    Console.WriteLine("Resultado do operador OU (false || false): " + (condicao2 || condicao4));
+    Console.WriteLine("Resultado do operador OU (true || true): " + (condicao1 || condicao3));
+
+    // Operador NÃO (!)
+    bool resultadoNAO = !condicao1;
+    Console.WriteLine("Resultado do operador NÃO (!true): " + resultadoNAO);
+    Console.WriteLine("Resultado do operador NÃO (!false): " + !condicao2);
+
+
+// ===================================================
+// Operadores Aritméticos
+// +, -, *, /, %, ++, --
+Console.WriteLine();
+Console.WriteLine("Trabalhando com operadores aritméticos:");
+Console.WriteLine();
+
+    // Exemplo 1:
+    int aAritmeticos = 10;
+    int bAritmeticos = 3;
+
+    Console.WriteLine("Soma (10 + 3): " + (aAritmeticos + bAritmeticos));
+    Console.WriteLine("Subtração (10 - 3): " + (aAritmeticos - bAritmeticos));
+    Console.WriteLine("Multiplicação (10 * 3): " + (aAritmeticos * bAritmeticos));
+    Console.WriteLine("Divisão (10 / 3): " + (aAritmeticos / bAritmeticos));
+    Console.WriteLine("Módulo (10 % 3): " + (aAritmeticos % bAritmeticos));
+
+    // Incremento
+    aAritmeticos++;
+    Console.WriteLine("Incremento (a++): " + aAritmeticos);
+
+    // Decremento
+    bAritmeticos--;
+    Console.WriteLine("Decremento (b--): " + bAritmeticos);
+
+
+    // Exemplo 2 com a classe Calculadora
+    Console.WriteLine();
+    Console.WriteLine("Utilizando a classe Calculadora:");
+    Calculadora.Somar(10, 3);
+    Calculadora.Subtrair(10, 3);
+    Calculadora.Multiplicar(10, 3);
+    Calculadora.Dividir(10, 3);
+    Calculadora.Dividir(10, 0);
+
+
+// ===================================================
+// Operações Matemáticas Complexas
+// Math.Pow, Math.Sqrt, Math.Abs, Math.Round, Math.Ceiling, Math.Floor
+Console.WriteLine();
+Console.WriteLine("Trabalhando com operações matemáticas complexas:");
+Console.WriteLine();
+
+    // Exemplo 1:
+    double numeroMath = 16.0;
+
+    Console.WriteLine("Número: " + numeroMath);
+    Console.WriteLine("Potência (Math.Pow(numero, 2)): " + Math.Pow(numeroMath, 2));
+    Console.WriteLine("Raiz Quadrada (Math.Sqrt(numero)): " + Math.Sqrt(numeroMath));
+    Console.WriteLine("Valor Absoluto (Math.Abs(-numero)): " + Math.Abs(-numeroMath));
+    Console.WriteLine("Arredondar (Math.Round(15.67)): " + Math.Round(15.67));
+    Console.WriteLine("Arredondar para cima (Math.Ceiling(15.12)): " + Math.Ceiling(15.12));
+    Console.WriteLine("Arredondar para baixo (Math.Floor(15.89)): " + Math.Floor(15.89));
+
+    // Exemplo 2 com a classe Calculadora
+    Console.WriteLine();
+    Console.WriteLine("Utilizando a classe Calculadora para potência:");
+    Calculadora.Potencia(5, 3);
+
+    // Exemplo 3 com a classe Calculadora
+    Console.WriteLine();
+    Console.WriteLine("Utilizando a classe Calculadora para seno, cosseno e tangente:");
+    Calculadora.Seno(30);
+    Calculadora.Cosseno(30);
+    Calculadora.Tangente(30);
