@@ -380,3 +380,121 @@ Console.WriteLine();
     Calculadora.Seno(30);
     Calculadora.Cosseno(30);
     Calculadora.Tangente(30);
+
+
+// ===================================================
+// Estruturas de repetição
+// for, while, do while, foreach
+Console.WriteLine();
+Console.WriteLine("Trabalhando com estruturas de repetição:");
+Console.WriteLine();
+
+    // Exemplo 1 com for
+    Console.WriteLine("Exemplo com for:");
+    for (int i = 1; i <= 5; i++)
+    {
+        Console.WriteLine("Contador for: " + i);
+    }
+
+    // Exemplo 2 com while
+    Console.WriteLine();
+    Console.WriteLine("Exemplo com while:");
+    int contadorWhile = 1;
+    while (contadorWhile <= 5)
+    {
+        Console.WriteLine("Contador while: " + contadorWhile);
+        contadorWhile++;
+    }
+
+    // Exemplo 3 com do while
+    Console.WriteLine();
+    Console.WriteLine("Exemplo com do while:");
+    int contadorDoWhile = 1;
+    do
+    {
+        Console.WriteLine("Contador do while: " + contadorDoWhile);
+        contadorDoWhile++;
+    } while (contadorDoWhile <= 5);
+
+    // Exemplo 4 com foreach
+    Console.WriteLine();
+    Console.WriteLine("Exemplo com foreach:");
+    string[] frutas = { "Maçã", "Banana", "Laranja", "Uva", "Manga" };
+    foreach (string fruta in frutas)
+    {
+        Console.WriteLine("Fruta: " + fruta);
+    }
+
+    // Exemplo 5 com break e continue com for
+    Console.WriteLine();
+    Console.WriteLine("Exemplo com break e continue:");
+    for (int i = 1; i <= 10; i++)
+    {
+        if (i == 6)
+        {
+            Console.WriteLine("Interrompendo o loop quando i é igual a 6 (break).");
+            break; // sai do loop quando i é 6
+        }
+
+        if (i % 2 == 0)
+        {
+            Console.WriteLine("Pulando números pares (continue).");
+            continue; // pula os números pares
+        }
+
+        Console.WriteLine("Número ímpar: " + i);
+    }
+
+    // Exemplo 6 com break e continue com while
+    Console.WriteLine();
+    Console.WriteLine("Exemplo com break e continue em while:");
+    int contadorBreakContinue = 1;
+    while (contadorBreakContinue <= 10)
+    {
+        if (contadorBreakContinue == 6)
+        {
+            Console.WriteLine("Interrompendo o loop quando contador é igual a 6 (break).");
+            break; // sai do loop quando contador é 6
+        }
+
+        if (contadorBreakContinue % 2 == 0)
+        {
+            Console.WriteLine("Pulando números pares (continue).");
+            contadorBreakContinue++;
+            continue; // pula os números pares
+        }
+
+        Console.WriteLine("Número ímpar: " + contadorBreakContinue);
+        contadorBreakContinue++;
+    }
+
+    // Exemplo 7 com menu interativo usando while
+    Console.WriteLine();
+    Console.WriteLine("Exemplo de menu interativo com while:");
+    string? opcao;
+    do
+    {
+        Console.WriteLine();
+        Console.WriteLine("Menu:");
+        Console.WriteLine("1 - Opção 1");
+        Console.WriteLine("2 - Opção 2");
+        Console.WriteLine("3 - Sair");
+        Console.Write("Escolha uma opção: ");
+        opcao = Console.ReadLine();
+
+        switch (opcao)
+        {
+            case "1":
+                Console.WriteLine("Você escolheu a Opção 1.");
+                break;
+            case "2":
+                Console.WriteLine("Você escolheu a Opção 2.");
+                break;
+            case "3":
+                Console.WriteLine("Saindo do menu.");
+                break;
+            default:
+                Console.WriteLine("Opção inválida. Tente novamente.");
+                break;
+        }
+    } while (opcao != "3");
