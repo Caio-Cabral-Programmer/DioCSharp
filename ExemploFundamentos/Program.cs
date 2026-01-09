@@ -1,5 +1,4 @@
-﻿using ExemploFundamentos.Models;
-
+﻿using ExemploFundamentos.Common.Models;
 
 // ===================================================
 // Instanciando um objeto da classe Pessoa:
@@ -498,3 +497,116 @@ Console.WriteLine();
                 break;
         }
     } while (opcao != "3");
+
+
+// ===================================================
+// Arrays e Coleções
+// Array, List, Dictionary
+Console.WriteLine();
+Console.WriteLine("Trabalhando com arrays e coleções:");
+Console.WriteLine();
+
+    // Exemplo 1 com Array
+    Console.WriteLine("Exemplo com Array:");
+    int[] numerosArray = new int[5] { 10, 20, 30, 40, 50 };
+    for (int i = 0; i < numerosArray.Length; i++)
+    {
+        Console.WriteLine("Número no array: " + numerosArray[i]);
+    }
+
+    // Exemplo 2 com List
+    Console.WriteLine();
+    Console.WriteLine("Exemplo com List:");
+    List<string> frutasList = new List<string> { "Maçã", "Banana", "Laranja" };
+    frutasList.Add("Uva");
+    frutasList.Add("Manga");
+    foreach (string fruta in frutasList)
+    {
+        Console.WriteLine("Fruta na lista: " + fruta);
+    }
+
+    // Exemplo 3 com Dictionary
+    Console.WriteLine();
+    Console.WriteLine("Exemplo com Dictionary:");
+    Dictionary<string, string> capitais = new Dictionary<string, string>();
+    capitais.Add("Brasil", "Brasília");
+    capitais.Add("Portugal", "Lisboa");
+    capitais.Add("Espanha", "Madri");
+    foreach (KeyValuePair<string, string> item in capitais)
+    {
+        Console.WriteLine("País: " + item.Key + ", Capital: " + item.Value);
+    }
+
+    // Exemplo 4 com Dictionary com inicialização simplificada
+    Console.WriteLine();
+    Console.WriteLine("Exemplo com Dictionary (inicialização simplificada):");
+    Dictionary<string, string> capitaisSimplificado = new Dictionary<string, string>
+    {
+        { "França", "Paris" },
+        { "Itália", "Roma" },
+        { "Alemanha", "Berlim" }
+    };
+    foreach (var item in capitaisSimplificado)
+    {
+        Console.WriteLine("País: " + item.Key + ", Capital: " + item.Value);
+    }
+
+    // Exemplo 5 com Array e Array.Resize
+    Console.WriteLine();
+    Console.WriteLine("Exemplo com Array e Array.Resize:");
+    int[] numerosArrayResize = new int[3] { 1, 2, 3 };
+    foreach (int numero in numerosArrayResize)
+    {
+        Console.WriteLine("Número no array: " + numero);
+    }
+
+    Array.Resize(ref numerosArrayResize, 5); // redimensiona o array para tamanho 5
+    numerosArrayResize[3] = 4;
+    numerosArrayResize[4] = 5;
+    foreach (int numero in numerosArrayResize)
+    {
+        Console.WriteLine("Número no array redimensionado: " + numero);
+    }
+
+    // Exemplo 6 com Array e Array.Copy
+    Console.WriteLine();
+    Console.WriteLine("Exemplo com Array e Array.Copy:");
+    int[] origem = new int[5] { 10, 20, 30, 40, 50 };
+    int[] destino = new int[5];
+    foreach (int numero in destino)
+    {
+        Console.WriteLine("Número no array destino: " + numero);
+    }
+
+    Array.Copy(origem, destino, origem.Length);
+    foreach (int numero in destino)
+    {
+        Console.WriteLine("Número no array destino após Array.Copy: " + numero);
+    }
+
+    // Exemplo 5 com List e métodos comuns
+    Console.WriteLine();
+    Console.WriteLine("Exemplo com List e métodos comuns:");
+    List<string> carros = new List<string> { "Gol", "Uno", "Palio" };
+    foreach (string carro in carros)
+    {
+        Console.WriteLine("Carro na lista: " + carro);
+    }
+
+    carros.Add("Civic");
+    foreach (string carro in carros)
+    {
+        Console.WriteLine("Carro na lista depois do add: " + carro);
+    }
+
+    carros.Remove("Uno");
+    foreach (string carro in carros)
+    {
+        Console.WriteLine("Carro na lista depois do remove: " + carro);
+    }
+
+    carros.Sort();
+    foreach (string carro in carros)
+    {
+        Console.WriteLine("Carro na lista depois do sort: " + carro);
+    }
