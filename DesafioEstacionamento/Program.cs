@@ -37,7 +37,7 @@ do
 // Instancia a classe Estacionamento, já com os valores obtidos anteriormente
 Estacionamento estacionamento = new(precoInicial, precoPorHora);
 
-string opcao = string.Empty;
+string? opcao = string.Empty;
 bool exibirMenu = true;
 
 // Realiza o loop do menu
