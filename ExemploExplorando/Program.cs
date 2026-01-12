@@ -274,3 +274,148 @@ Console.WriteLine("- throw e seu uso");
 Console.WriteLine();
 
 new ExemploExcecao().Metodo1();
+
+
+// ============================================================
+// COLEÇÕES
+Console.WriteLine();
+Console.WriteLine("=== COLEÇÕES ===");
+Console.WriteLine();
+
+Console.WriteLine();
+Console.WriteLine("- Queue (Fila)");
+Console.WriteLine();
+
+Queue<string> fila = new Queue<string>();
+Console.WriteLine("Adicionando elementos...");
+fila.Enqueue("Primeiro");
+fila.Enqueue("Segundo");
+fila.Enqueue("Terceiro");
+
+Console.WriteLine($"Elementos na fila: {fila.Count}");
+Console.WriteLine($"Primeiro elemento da fila: {fila.Peek()}");
+Console.WriteLine($"Removendo o primeiro elemento da fila: {fila.Dequeue()}");
+Console.WriteLine($"Elementos na fila após remoção: {fila.Count}");
+
+Console.WriteLine("Elementos restantes na fila:");
+foreach (var item in fila)
+{
+    Console.WriteLine(item);
+}
+
+Console.WriteLine("Adicionando mais um elemento...");
+fila.Enqueue("Quarto");
+Console.WriteLine($"Elementos na fila após adição: {fila.Count}");
+Console.WriteLine("Elementos na fila agora:");
+foreach (var item in fila)
+{
+    Console.WriteLine(item);
+}
+
+Console.WriteLine();
+Console.WriteLine("- Stack (Pilha)");
+Console.WriteLine();
+
+Stack<string> pilha = new Stack<string>();
+Console.WriteLine("Adicionando elementos...");
+pilha.Push("Primeiro");
+pilha.Push("Segundo");
+pilha.Push("Terceiro");
+
+Console.WriteLine($"Elementos na pilha: {pilha.Count}");
+Console.WriteLine($"Primeiro elemento da pilha: {pilha.Peek()}");
+Console.WriteLine($"Removendo o primeiro elemento da pilha: {pilha.Pop()}");
+Console.WriteLine($"Elementos na pilha após remoção: {pilha.Count}");
+
+Console.WriteLine("Elementos restantes na pilha:");
+foreach (var item in pilha)
+{
+    Console.WriteLine(item);
+}
+
+Console.WriteLine("Adicionando mais um elemento...");
+pilha.Push("Quarto");
+Console.WriteLine($"Elementos na pilha após adição: {pilha.Count}");
+Console.WriteLine("Elementos na pilha agora:");
+foreach (var item in pilha)
+{
+    Console.WriteLine(item);
+}
+
+Console.WriteLine();
+Console.WriteLine("- Dictionary (Dicionário)");
+Console.WriteLine();
+
+Dictionary<int, string> dicionario = new Dictionary<int, string>();
+Console.WriteLine("Adicionando elementos...");
+dicionario.Add(1, "Primeiro");
+dicionario.Add(2, "Segundo");
+dicionario.Add(3, "Terceiro");
+Console.WriteLine($"Elementos no dicionário: {dicionario.Count}");
+Console.WriteLine($"Elemento com chave 2: {dicionario[2]}");
+Console.WriteLine("Removendo o elemento com chave 2...");
+dicionario.Remove(2);
+Console.WriteLine($"Elementos no dicionário após remoção: {dicionario.Count}");
+Console.WriteLine("Elementos restantes no dicionário [com var]:");
+foreach (var item in dicionario)
+{
+    Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+}
+
+Console.WriteLine("Elementos restantes no dicionário [com KeyValuePair]:");
+foreach (KeyValuePair<int, string> item in dicionario)
+{
+    Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+}
+
+Console.WriteLine("Elementos restantes no dicionário com um valor alterado:");
+dicionario[3] = "Terceiro - Alterado";
+foreach (var item in dicionario)
+{
+    Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+}
+
+Console.WriteLine("Verificando elemento no dicionário:");
+Console.WriteLine($"Chave 1 existe? {dicionario.ContainsKey(1)}");
+Console.WriteLine($"Valor com chave 3 existe? {dicionario.ContainsValue("Terceiro - Alterado")}");
+
+if (dicionario.TryGetValue(3, out string valorEncontrado))
+{
+    Console.WriteLine($"Valor encontrado para a chave 3: {valorEncontrado}");
+}
+else
+{
+    Console.WriteLine("Chave não encontrada.");
+}
+
+Console.WriteLine("Acessando valor pela chave:");
+Console.WriteLine($"Valor para a chave 1: {dicionario[1]}");
+Console.WriteLine($"Valor para a chave 3: {dicionario[3]}");
+
+Console.WriteLine();
+Console.WriteLine("- HashSet (Conjunto)");
+Console.WriteLine();
+
+HashSet<string> conjunto = new HashSet<string>();
+Console.WriteLine("Adicionando elementos...");
+conjunto.Add("Elemento1");
+conjunto.Add("Elemento2");
+conjunto.Add("Elemento3");
+conjunto.Add("Elemento1"); // Tentativa de adicionar duplicata
+Console.WriteLine($"Elementos no conjunto: {conjunto.Count}");
+Console.WriteLine("Elementos no conjunto:");
+foreach (var item in conjunto)
+{
+    Console.WriteLine(item);
+}
+
+Console.WriteLine("Removendo o elemento 'Elemento2'...");
+conjunto.Remove("Elemento2");
+Console.WriteLine($"Elementos no conjunto após remoção: {conjunto.Count}");
+Console.WriteLine("Elementos restantes no conjunto:");
+foreach (var item in conjunto)
+{
+    Console.WriteLine(item);
+}
+
+        
