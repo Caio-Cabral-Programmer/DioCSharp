@@ -282,6 +282,32 @@ Console.WriteLine();
 Console.WriteLine("=== COLEÇÕES ===");
 Console.WriteLine();
 
+// List (Lista)
+Console.WriteLine();
+Console.WriteLine("- List (Lista)");
+Console.WriteLine();
+
+List<string> lista = new List<string>();
+Console.WriteLine("Adicionando elementos...");
+lista.Add("Primeiro");
+lista.Add("Segundo");
+lista.Add("Terceiro");
+Console.WriteLine($"Elementos na lista: {lista.Count}");
+Console.WriteLine("Elementos na lista:");
+foreach (var item in lista)
+{
+    Console.WriteLine(item);
+}
+Console.WriteLine("Removendo o elemento 'Segundo'...");
+lista.Remove("Segundo");
+Console.WriteLine($"Elementos na lista após remoção: {lista.Count}");
+Console.WriteLine("Elementos restantes na lista:");
+foreach (var item in lista)
+{
+    Console.WriteLine(item);
+}
+
+// Queue (Fila)
 Console.WriteLine();
 Console.WriteLine("- Queue (Fila)");
 Console.WriteLine();
@@ -312,6 +338,7 @@ foreach (var item in fila)
     Console.WriteLine(item);
 }
 
+// Stack (Pilha)
 Console.WriteLine();
 Console.WriteLine("- Stack (Pilha)");
 Console.WriteLine();
@@ -342,6 +369,7 @@ foreach (var item in pilha)
     Console.WriteLine(item);
 }
 
+// Dictionary (Dicionário)
 Console.WriteLine();
 Console.WriteLine("- Dictionary (Dicionário)");
 Console.WriteLine();
@@ -392,6 +420,7 @@ Console.WriteLine("Acessando valor pela chave:");
 Console.WriteLine($"Valor para a chave 1: {dicionario[1]}");
 Console.WriteLine($"Valor para a chave 3: {dicionario[3]}");
 
+// HashSet (Conjunto)
 Console.WriteLine();
 Console.WriteLine("- HashSet (Conjunto)");
 Console.WriteLine();
