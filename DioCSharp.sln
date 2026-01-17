@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExemploPoo", "ExemploPoo\Ex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuloApi", "ModuloApi\ModuloApi.csproj", "{DE33AF82-BF65-47AD-ABC4-F2C71F541FCA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioHotel", "DesafioHotel\DesafioHotel.csproj", "{54F6DE04-0E42-4F7A-AD80-607A9C6379DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -139,6 +141,18 @@ Global
 		{DE33AF82-BF65-47AD-ABC4-F2C71F541FCA}.Release|x64.Build.0 = Release|Any CPU
 		{DE33AF82-BF65-47AD-ABC4-F2C71F541FCA}.Release|x86.ActiveCfg = Release|Any CPU
 		{DE33AF82-BF65-47AD-ABC4-F2C71F541FCA}.Release|x86.Build.0 = Release|Any CPU
+		{54F6DE04-0E42-4F7A-AD80-607A9C6379DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54F6DE04-0E42-4F7A-AD80-607A9C6379DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54F6DE04-0E42-4F7A-AD80-607A9C6379DF}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{54F6DE04-0E42-4F7A-AD80-607A9C6379DF}.Debug|x64.Build.0 = Debug|Any CPU
+		{54F6DE04-0E42-4F7A-AD80-607A9C6379DF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{54F6DE04-0E42-4F7A-AD80-607A9C6379DF}.Debug|x86.Build.0 = Debug|Any CPU
+		{54F6DE04-0E42-4F7A-AD80-607A9C6379DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54F6DE04-0E42-4F7A-AD80-607A9C6379DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54F6DE04-0E42-4F7A-AD80-607A9C6379DF}.Release|x64.ActiveCfg = Release|Any CPU
+		{54F6DE04-0E42-4F7A-AD80-607A9C6379DF}.Release|x64.Build.0 = Release|Any CPU
+		{54F6DE04-0E42-4F7A-AD80-607A9C6379DF}.Release|x86.ActiveCfg = Release|Any CPU
+		{54F6DE04-0E42-4F7A-AD80-607A9C6379DF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
